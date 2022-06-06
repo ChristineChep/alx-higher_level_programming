@@ -1,11 +1,12 @@
 #include "lists.h"
+
 /**
  * reverse - reverses the second half of the list
  * @h_r: head of the second half
  * Return: no return
  */
-void reverse(listint_t **h_r)
 
+void reverse(listint_t **h_r)
 {
 	listint_t *prv;
 	listint_t *crr;
@@ -13,8 +14,8 @@ void reverse(listint_t **h_r)
 
 	prv = NULL;
 	crr = *h_r;
-	while (crr != NULL)
 
+	while (crr != NULL)
 	{
 		nxt = crr->next;
 		crr->next = prv;
@@ -29,6 +30,7 @@ void reverse(listint_t **h_r)
  * @h2: head of the second half
  * Return: 1 if are equals, 0 if not
  */
+
 int compare(listint_t *h1, listint_t *h2)
 {
 	listint_t *tmp1;
@@ -66,6 +68,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *slow, *fast, *prev_slow;
 	listint_t *scn_half, *middle;
+
 	int isp;
 
 	slow = fast = prev_slow = *head;

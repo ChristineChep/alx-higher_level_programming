@@ -1,12 +1,10 @@
 #include "lists.h"
-#include <stddef.h>
 
 /**
  * reverse - reverses the second half of the list
  * @h_r: head of the second half
  * Return: no return
  */
-
 void reverse(listint_t **h_r)
 {
 	listint_t *prv;
@@ -31,7 +29,6 @@ void reverse(listint_t **h_r)
  * @h2: head of the second half
  * Return: 1 if are equals, 0 if not
  */
-
 int compare(listint_t *h1, listint_t *h2)
 {
 	listint_t *tmp1;

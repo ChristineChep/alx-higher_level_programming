@@ -7,6 +7,8 @@ class Rectangle:
 
     number_of_instances = 0
 
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
 
         """Instantiates the class"""
@@ -62,6 +64,7 @@ class Rectangle:
         if value < 0:
 
             raise ValueError("height must be >= 0")
+
         self.__height = value
 
     def area(self):
@@ -82,6 +85,32 @@ class Rectangle:
 
             return (self.__width + self.__height) * 2
 
+    @staticmethod
+
+    def bigger_or_equal(rect_1, rect_2):
+
+        """Return the Rectangle with the greater area.
+
+        Raises:
+
+            TypeError: If either of rect_1 or rect_2 is not a Rectangle.
+
+        """
+
+        if not isinstance(rect_1, Rectangle):
+
+            raise TypeError("rect_1 must be an instance of Rectangle")
+
+        if not isinstance(rect_2, Rectangle):
+
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+        if rect_1.area() >= rect_2.area():
+
+            return (rect_1)
+
+        return (rect_2)
+
     def __str__(self):
 
         """Prints the rectangle"""
@@ -96,7 +125,7 @@ class Rectangle:
 
             for j in range(self.__width):
 
-                new.append('#')
+                new.append(str(self.print_symbol))
 
             if i != self.__height - 1:
 
